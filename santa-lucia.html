@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Santa Lucía</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #ff4081, #ff80ab);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    /* Galería en loop automático */
+    .galeria-wrapper {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .galeria {
+      display: flex;
+      gap: 15px;
+      padding: 20px;
+      animation: scrollLoop 20s linear infinite;
+    }
+
+    .galeria img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      flex-shrink: 0;
+    }
+
+    @keyframes scrollLoop {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* Contenedor con descripción */
+    .contenido {
+      margin: 20px;
+    }
+
+    .descripcion-box {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      line-height: 1.6;
+    }
+
+    .tarjeta-info {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .curiosidades {
+      background: #fff0f6;
+      border-left: 5px solid #ff4081;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 24px;
+      }
+
+      .galeria img {
+        width: 90vw;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Descubre Santa Lucía</h1>
+  </header>
+
+  <!-- Carrusel Loop -->
+  <div class="galeria-wrapper">
+    <div class="galeria" id="galeria">
+      <img src="images/santa_lucia.png" alt="Santa Lucía 1">
+      <img src="images/santa_lucia2.png" alt="Santa Lucía 2">
+      <img src="images/santa_lucia3.png" alt="Santa Lucía 3">
+      <!-- duplicadas para scroll infinito -->
+      <img src="images/santa_lucia4.png" alt="Santa Lucía 1">
+      <img src="images/santa_lucia5.png" alt="Santa Lucía 2">
+      <img src="images/santa_lucia6.png" alt="Santa Lucía 3">
+    </div>
+  </div>
+
+  <!-- Descripción con fondo blanco y forma -->
+  <div class="contenido">
+    <div class="descripcion-box">
+      <p>
+        Santa Lucía es un lugar lleno de historia, naturaleza y cultura. Rodeado de montañas y ríos, es perfecto para explorar y relajarse.
+        La hospitalidad de su gente y sus paisajes lo hacen inolvidable para quienes lo visitan.
+      </p>
+    </div>
+  </div>
+
+  <!-- Ficha informativa -->
+  <div class="tarjeta-info">
+    <h3>Datos interesantes</h3>
+    <ul>
+      <li><strong>Ubicación:</strong> Región Andina</li>
+      <li><strong>Altitud:</strong> 1,500 msnm</li>
+      <li><strong>Clima:</strong> Templado húmedo</li>
+      <li><strong>Habitantes:</strong> Aproximadamente 10,000</li>
+    </ul>
+  </div>
+
+  <!-- Curiosidades -->
+  <div class="curiosidades">
+    <h3>¿Sabías que...?</h3>
+    <p>
+      Santa Lucía celebra una de las ferias tradicionales más antiguas de la región. Además, cuenta con una reserva natural que alberga especies únicas.
+    </p>
+  </div>
+
+</body>
+</html>

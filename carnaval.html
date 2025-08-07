@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carnaval</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #ff9800, #ff5722);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    .galeria-wrapper {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .galeria {
+      display: flex;
+      gap: 15px;
+      padding: 20px;
+      animation: scrollLoop 25s linear infinite;
+    }
+
+    .galeria img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      flex-shrink: 0;
+    }
+
+    @keyframes scrollLoop {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .contenido {
+      margin: 20px;
+    }
+
+    .descripcion-box {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      line-height: 1.6;
+    }
+
+    .tarjeta-info {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .curiosidades {
+      background: #fff3e0;
+      border-left: 5px solid #ff9800;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 24px;
+      }
+
+      .galeria img {
+        width: 90vw;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Vive el Carnaval</h1>
+  </header>
+
+  <!-- Galería Loop -->
+  <div class="galeria-wrapper">
+    <div class="galeria">
+      <img src="images/carnaval.jpg" alt="Carnaval 1">
+      <img src="images/carnaval1.jpg" alt="Carnaval 2">
+      <img src="images/carnaval2.jpg" alt="Carnaval 3">
+      <!-- duplicadas para loop -->
+      <img src="images/carnaval3.jpg" alt="Carnaval 1">
+      <img src="images/carnaval4.jpg" alt="Carnaval 2">
+      <img src="images/carnaval5.jpg" alt="Carnaval 3">
+    </div>
+  </div>
+
+  <!-- Descripción -->
+  <div class="contenido">
+    <div class="descripcion-box">
+      <p>
+        El Carnaval es una celebración llena de color, música y tradición. En esta fiesta vibrante se mezclan ritmos folclóricos,
+        disfraces espectaculares y desfiles que hacen que toda la ciudad se llene de vida. Es una expresión del alma cultural de su pueblo.
+      </p>
+    </div>
+  </div>
+
+  <!-- Datos destacados -->
+  <div class="tarjeta-info">
+    <h3>Datos del Carnaval</h3>
+    <ul>
+      <li><strong>Origen:</strong> Tradición precolombina fusionada con cultura española</li>
+      <li><strong>Duración:</strong> 4 días</li>
+      <li><strong>Fecha:</strong> Febrero (antes del Miércoles de Ceniza)</li>
+      <li><strong>Ubicación destacada:</strong> Barranquilla, Colombia</li>
+    </ul>
+  </div>
+
+  <!-- Curiosidades -->
+  <div class="curiosidades">
+    <h3>¿Sabías que...?</h3>
+    <p>
+      El Carnaval de Barranquilla fue declarado Patrimonio Oral e Inmaterial de la Humanidad por la UNESCO en 2003. Es una de las fiestas más grandes del mundo.
+    </p>
+  </div>
+
+</body>
+</html>

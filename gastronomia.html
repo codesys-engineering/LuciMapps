@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gastronomía</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #fdfaf6;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #8bc34a, #4caf50);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    .galeria-wrapper {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .galeria {
+      display: flex;
+      gap: 15px;
+      padding: 20px;
+      animation: scrollLoop 25s linear infinite;
+    }
+
+    .galeria img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      flex-shrink: 0;
+    }
+
+    @keyframes scrollLoop {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .contenido {
+      margin: 20px;
+    }
+
+    .descripcion-box {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      line-height: 1.6;
+    }
+
+    .tarjeta-info {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .curiosidades {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 24px;
+      }
+
+      .galeria img {
+        width: 90vw;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Sabores de Nuestra Tierra</h1>
+  </header>
+
+  <!-- Galería Loop -->
+  <div class="galeria-wrapper">
+    <div class="galeria">
+      <img src="images/gastronomia.jpg" alt="Plato típico 1">
+      <img src="images/gastronomia2.jpg" alt="Plato típico 2">
+      <img src="images/gastronomia3.jpg" alt="Plato típico 3">
+      <!-- duplicadas para loop -->
+      <img src="images/gastronomia4.jpg" alt="Plato típico 1">
+      <img src="images/gastronomia5.jpg" alt="Plato típico 2">
+      <img src="images/gastronomia6.jpg" alt="Plato típico 3">
+    </div>
+  </div>
+
+  <!-- Descripción -->
+  <div class="contenido">
+    <div class="descripcion-box">
+      <p>
+        La gastronomía local es una explosión de sabores, texturas y colores. Desde platos tradicionales hasta fusiones modernas,
+        cada bocado cuenta una historia de identidad, herencia y creatividad. 
+        Es el alma de nuestra cultura servida en un plato.
+      </p>
+    </div>
+  </div>
+
+  <!-- Ficha informativa -->
+  <div class="tarjeta-info">
+    <h3>Platos Destacados</h3>
+    <ul>
+      <li><strong>Sancocho:</strong> Caldo espeso con carne, yuca, plátano y mazorca</li>
+      <li><strong>Arepa de huevo:</strong> Arepa frita rellena de huevo</li>
+      <li><strong>Arroz con coco:</strong> Tradicional del Caribe con sabor dulce-salado</li>
+      <li><strong>Mondongo:</strong> Sopa espesa hecha con callo, papa y condimentos</li>
+    </ul>
+  </div>
+
+  <!-- Curiosidades -->
+  <div class="curiosidades">
+    <h3>¿Sabías que...?</h3>
+    <p>
+      En muchas regiones de Colombia, los platos tradicionales cambian por departamento. Lo que en la costa es un desayuno, 
+      en la sierra puede ser un almuerzo. ¡La diversidad culinaria es inmensa!
+    </p>
+  </div>
+
+</body>
+</html>
