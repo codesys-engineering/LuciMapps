@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inicio - LuciMapps Web</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(to right, #ff4081, #ff80ab);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    main {
+      flex: 1;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .boton {
+      background: linear-gradient(to right, #ff80ab, #ff4081);
+      color: white;
+      padding: 20px 40px;
+      font-size: 20px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .boton:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      background-color: #f1f1f1;
+    }
+
+    @media (max-width: 600px) {
+      .boton {
+        font-size: 16px;
+        padding: 16px 30px;
+      }
+
+      header h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Explora LuciMapps</h1>
+  </header>
+
+  <main>
+    <a href="carnaval.html" class="boton">🎭 Carnaval</a>
+    <a href="santa-lucia.html" class="boton">🏞️ Santa Lucía</a>
+    <a href="gastronomia.html" class="boton">🍽️ Gastronomía</a>
+  </main>
+
+  <footer>
+    &copy; 2025 LuciMapps. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
